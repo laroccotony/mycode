@@ -2,8 +2,9 @@
 """Alta3 Research || Author: RZFeeser@alta3.com"""
 
 # python3 -m pip install crayons
-import crayons
 import json
+import crayons
+
 
 # function to push commands
 def commandpush(devicecmd): # devicecmd==dict
@@ -23,7 +24,7 @@ def main():
     with open("devicecmd.json", "r") as devj:
         devicecmd = json.load(devj)
 
-    print(f"Welcome to the {crayons.blue('Network')} Device Command Pusher") # welcome message with blue text
+    print(f"Welcome to the {crayons.blue('Network')} Device Command Pusher")
 
     ## get data set
     print("\nData set found\n") # replace with function call that reads in data from file
@@ -37,12 +38,10 @@ def devicereboot(devicecmd):
         # we'll learn to write code that connects to devices here
         for mycmds in devicecmd[ip]:
             print(f'Attempting to sending command --> {mycmds}')
-            # we'll learn to write code that sends cmds to device here  
-    return None
+            # we'll learn to write code that sends cmds to device here
 
 def devicejson():
     pass
-    
 
 # call our main function
 main()
